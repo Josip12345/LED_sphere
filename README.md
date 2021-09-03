@@ -2,6 +2,8 @@
 Code for controlling RGB LED half sphere via web server on ESP8266 (NodeMCU 1.0 (ESP-12E Module)).
 In principle the half sphere is 9x16 matrix, with the exception that the first row has only 1 and the second row has only 8 leds.
 
+**Video: https://youtu.be/-h-K3bPTNTU**
+
 This project is a combination of:
 * https://github.com/toggledbits/MatrixFireFast
 * https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/
