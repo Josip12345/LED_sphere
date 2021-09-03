@@ -1,0 +1,73 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp8266-nodemcu-web-server-websocket-sliders/ -->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Qubit DJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="pickercss.css">
+</head>
+
+
+
+  <body>
+   <div class="topnav">
+        <h1>Qubit DJ</h1>
+   </div>
+
+   <div class="card-grid">
+	<div class="card">
+		<label for="cars">Choose a function:</label class="card-title">
+		<select name="cars" id="cars" onchange="passOption(this)" class="drop-down">
+		  <option value="qDART">qDART</option>
+		  <option value="qGLOW">qGLOW</option>
+		  <option value="qFIRE">qFIRE</option>
+		  <option value="default">default</option>
+		</select>
+	</div>
+   </div>
+
+    <div class="container">
+
+      <a class="btn btn-primary btn-lg" href="#" id="change_color" role="button">Change Color</a>
+      <input onchange="updatePickedColor(this)" class="jscolor {onFineChange:'update(this)'}" id="rgb">
+    </div>
+
+
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title"><h5>Slider 1</h5></p>
+                <p class="switch">
+                    <input type="range" onchange="updateSlider(this)" id="slider1" min="0" max="500" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Slider 1 value: <span id="sliderValue1"></span> </p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title"><h5>Brightness</h5></p>
+                <p class="switch">
+                    <input type="range" onchange="updateSlider(this)" id="slider2" min="0" max="180" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Brightness value (=a/battery_lifetime): <span id="sliderValue2"></span> </p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script src="pickerjs.js"></script>
+  </body>
+
+</html>
